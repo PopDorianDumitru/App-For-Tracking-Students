@@ -1,0 +1,10 @@
+C:\Users\40732\source\repos\Ex_Info\FirstData\bin\Debug\FirstData.dacpac
+C:\Users\40732\source\repos\Ex_Info\FirstData\bin\Debug\FirstData.dll
+C:\Users\40732\source\repos\Ex_Info\FirstData\bin\Debug\FirstData.pdb
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\FirstData.sqlprojAssemblyReference.cache
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\FirstData.dll
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\FirstData.pdb
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\Model.xml
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\refactor.xml
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\postdeploy.sql
+C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\predeploy.sql

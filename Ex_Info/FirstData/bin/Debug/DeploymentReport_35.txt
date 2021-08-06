@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Table2]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Table2] (Table)
+     Create
+       [dbo].[medie] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Table2_ToTable] (Foreign Key)
+     Create
+       [dbo].[FK_Table2_ToTable] (Foreign Key)

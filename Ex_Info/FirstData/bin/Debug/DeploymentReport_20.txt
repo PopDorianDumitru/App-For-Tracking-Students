@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Table1] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[Clasa10] (View)
+       [dbo].[Class11] (View)
+       [dbo].[Class12] (View)
+       [dbo].[Class9] (View)
+       [dbo].[cautNume] (Procedure)
+       [dbo].[ordNume] (Procedure)

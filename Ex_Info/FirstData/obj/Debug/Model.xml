@@ -1,0 +1,1570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="FirstData.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\40732\SOURCE\REPOS\EX_INFO\FIRSTDATA\OBJ\DEBUG\FIRSTDATA.DLL" />
+			<Metadata Name="AssemblyName" Value="FirstData" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\40732\source\repos\Ex_Info\FirstData\obj\Debug\FirstData.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Table1].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Table2].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[anul1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Class9.Id, Class9.Name, Class9.Class, Class9.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5 
+	FROM Class9
+	JOIN Table2 ON Student_id = Class9.Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Class9]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="226" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[anul1]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[anul2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Clasa10.Id, Clasa10.Name, Clasa10.Class, Clasa10.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5 
+	FROM Clasa10
+	JOIN Table2 ON Student_id = Clasa10.Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Clasa10]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="234" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[anul2]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[anul3]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Class11.Id, Class11.Name, Class11.Class, Class11.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5 
+	FROM Class11
+	JOIN Table2 ON Student_id = Class11.Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Class11]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="232" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[anul3]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[anul4]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Class12.Id, Class12.Name, Class12.Class, Class12.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5 
+	FROM Class12
+	JOIN Table2 ON Student_id = Class12.Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Class12]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="232" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[anul4]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[cautNume]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Table1.Id, Table1.Name, Table1.Class, Table1.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5 
+	FROM dbo.Table1
+	JOIN Table2 ON Student_id = Table1.Id
+	WHERE Name LIKE '%'+@Nume+'%';
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[cautNume].[@Nume]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[cautNume].[@Nume]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="286" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[cautNume]&#xD;&#xA;&#x9;@Nume nvarchar(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[Clasa10]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[ SELECT * FROM [dbo].Table1 WHERE Class = 2]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Clasa10].[Id]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Clasa10].[Name]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Clasa10].[Class]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Class]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Clasa10].[Age]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Age]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="75" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[Clasa10]&#xD;&#xA;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[Class11]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[ SELECT * FROM [dbo].Table1 WHERE Class = 3]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class11].[Id]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class11].[Name]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class11].[Class]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Class]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class11].[Age]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Age]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="75" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[Class11]&#xD;&#xA;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[Class12]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[ SELECT * FROM [dbo].Table1 WHERE Class = 4]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class12].[Id]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class12].[Name]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class12].[Class]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Class]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class12].[Age]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Age]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="75" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[Class12]&#xD;&#xA;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[dbo].[Class9]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[ SELECT *
+	
+	FROM [dbo].[Table1] WHERE Class = 1]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class9].[Id]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class9].[Name]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class9].[Class]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Class]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[Class9].[Age]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dbo].[Table1].[Age]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="81" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [dbo].[Class9]&#xD;&#xA;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[inserare]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	INSERT INTO Table1(Name, Age, Class) VALUES(@name, @age, @an);
+	INSERT INTO Table2( Student_id ,not1,not2,not3,not4,not5) VALUES(SCOPE_IDENTITY() ,@not1,@not2,@not3,@not4,@not5);
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@an]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[inserare].[@not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@age]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@an]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@not1]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@not2]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@not3]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@not4]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[inserare].[@not5]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="330" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[inserare]&#xD;&#xA;&#x9;@name text,&#xD;&#xA;&#x9;@age int,&#xD;&#xA;&#x9;@an int,&#xD;&#xA;&#x9;@not1 int,&#xD;&#xA;&#x9;@not2 int,&#xD;&#xA;&#x9;@not3 int,&#xD;&#xA;&#x9;@not4 int,&#xD;&#xA;&#x9;@not5 int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[medie]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Table1.Id, Table1.Name, Table1.Class, Table1.Age
+	,Table2.not1, Table2.not2 , Table2.not3, Table2.not4, Table2.not5
+	FROM Table1 JOIN Table2 ON Student_id = Table1.Id 
+	ORDER BY CONVERT(DOUBLE PRECISION, (not1+not2+not3+not4+not5)/5.0);
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[float]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="293" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[medie]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ordNume]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[	
+	IF @cls = 1
+	BEGIN
+		SELECT Class9.Id, Class9.Name,  
+		Class9.Class,Class9.Age, Table2.not1,Table2.not2,
+		Table2.not3
+		,Table2.not4,Table2.not5 
+		FROM dbo.Class9 JOIN Table2 
+		ON Student_id = dbo.Class9.Id 
+		ORDER BY Name
+	END
+	ELSE
+	IF @cls = 2
+	BEGIN
+		SELECT Clasa10.Id, Clasa10.Name,
+		Clasa10.Class, Clasa10.Age,  Table2.not1,Table2.not2,
+		Table2.not3
+		,Table2.not4,Table2.not5 
+		FROM dbo.Clasa10 JOIN Table2 
+		ON Student_id = dbo.Clasa10.Id 
+		ORDER BY Name
+	END
+	ELSE
+	IF @cls = 3
+	BEGIN
+		SELECT Class11.Id, Class11.Name,  
+		Class11.Class,Class11.Age, Table2.not1,Table2.not2,
+		Table2.not3
+		,Table2.not4,Table2.not5 
+		FROM dbo.Class11 JOIN Table2 
+		ON Student_id = dbo.Class11.Id 
+		ORDER BY Name
+	END
+	ELSE
+	IF @cls = 4
+	BEGIN
+		SELECT Class12.Id, Class12.Name,  
+		Class12.Class, Class12.Age,Table2.not1,Table2.not2,
+		Table2.not3
+		,Table2.not4,Table2.not5 
+		FROM dbo.Class12 JOIN Table2 
+		ON Student_id = dbo.Class12.Id 
+		ORDER BY Name
+	END
+	ELSE
+	BEGIN 
+		SELECT Table1.Id, Table1.Name,  
+		Table1.Class,Table1.Age, Table2.not1,Table2.not2,
+		Table2.not3
+		,Table2.not4,Table2.not5 
+		FROM dbo.Table1 JOIN Table2 
+		ON Student_id = dbo.Table1.Id 
+		ORDER BY Name
+	END
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[ordNume].[@cls]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class9].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Clasa10].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class11].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Class12].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ordNume].[@cls]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1315" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[ordNume]&#xD;&#xA;&#x9;@cls int = 0&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[stergere]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DELETE FROM Table2 WHERE Student_id = @id;
+	DELETE FROM Table1 WHERE id= @id;
+	
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[stergere].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[stergere].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="141" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[stergere]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[student_id]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Table1]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table1].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table1].[Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table1].[Class]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table1].[Age]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Table2]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[Student_id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[not1]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[not2]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[not3]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[not4]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Table2].[not5]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[toti_studenti]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT Table1.Id, Table1.Name, Table1.Class, Table1.Age, Table2.not1,
+	Table2.not2,Table2.not3,Table2.not4,Table2.not5 
+	FROM Table1
+	JOIN Table2 ON Student_id = Table1.Id;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Table1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[Student_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Class]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table1].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not3]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not4]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Table2].[not5]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="230" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[toti_studenti]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>
